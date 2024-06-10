@@ -1,37 +1,50 @@
 * {
     font-family: sans-serif;
     font-size: 1rem;
+    animation-duration: 0s !important;
+    /* animation-iteration-count: infinite; */
+    transition-duration: 0.5s;
+    /* transition-delay: 0.2s; */
+    transition-timing-function: ease-in-out;
+    /* animation-fill-mode: both; */
+    /* animation-direction: alternate; */
+    background: black;
+    font-family: 'Roboto Mono'
 }
 
 @keyframes changeColor {
-    from {
-        background: blue;
-        transform: translateX(0px)rotateZ(190deg);
-        color: green;
-        /* padding-left: 20px; */
+    0% {
+        /* background: blue; */
+        transform: translateX(100px)rotateZ(-100deg);
+        /* color: green; */
+        /* filter: blur(10px); */
+        opacity: 0;
+        scale: 1.2;
+        /* scale: 130%; */
 
+    }
 
+    30% {
+        /* background: rgb(42, 99, 42); */
+        transform: translateX(-50px)rotateZ(80deg);
+        color: black;
+        /* filter: blur(4px); */
+        /* scale: 120%; */
     }
 
     50% {
-        background: green;
-        transform: translateX(20px)rotateZ(80deg);
-        /* padding-left: 40px; */
-        color: black;
-
-    }
-
-    to {
-        background: red;
-        transform: translateX(30px)rotateZ(0deg);
-        /* padding-left: 60px; */
-        color: yellow;
-
+        background: rgb(38, 116, 116);
+        transform: translateX(00px)rotateZ(0deg);
+        padding-left: 60px;
+        /* color: yellow; */
+        /* filter: blur(0px); */
+        opacity: 1;
+        /* scale: 1; */
     }
 }
 
 .changeColor {
-    background: blue;
+    background-color: blue;
     color: white;
     width: 200px;
     margin: auto;
@@ -40,10 +53,39 @@
     padding: 10px;
     border-radius: 10px;
     animation-name: changeColor;
-    animation-duration: 2s;
-    animation-fill-mode: forwards;
     font-weight: bold;
+    border: none;
+    scale: 1;
+
 }
+
+@keyframes titles {
+    10% {
+
+        font-size: 15pt;
+        opacity: 0.3;
+        color: black;
+        font-weight: 100;
+    }
+
+    30% {
+
+        font-size: 20pt;
+        opacity: 1;
+        color: white;
+        font-weight: 400;
+    }
+}
+
+h2 {
+    animation-name: titles;
+    color: white;
+    margin: auto;
+    width: 100%;
+    text-align: center;
+    font-size: 12pt;
+}
+
 
 .extraSpace {
     height: 1000px;
@@ -51,17 +93,121 @@
     margin: auto;
 }
 
-#test {
-    background: blue;
+@keyframes blur {
+    20% {
+        filter: blur(10px);
+        opacity: 0.5;
+    }
+
+    40% {
+        filter: blur(0px);
+        opacity: 1;
+    }
+}
+
+@keyframes flip-horizontal {
+    20% {
+        transform: rotateX(90deg)
+    }
+
+    30% {
+        transform: rotateX(40deg)
+    }
+
+    60% {
+        transform: rotateX(0deg)
+    }
+}
+
+@keyframes flip-vertical {
+    20% {
+        transform: rotateY(90deg);
+    }
+
+    30% {
+        transform: rotateY(40deg);
+    }
+
+    60% {
+        transform: rotateY(0deg);
+    }
+}
+
+.cards {
+    max-width: 1200px;
+    height: fit-content;
+    margin: 0 auto;
+    margin-top: 100px;
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(auto-fit,
+            minmax(200px, 1fr));
+    /* grid-template-rows: repeat(auto-fit,
+            minmax(200px, 3fr)); */
+    margin-bottom: 100px;
+    grid-auto-flow: dense;
+}
+
+.card {
+    background-color: dodgerblue;
     color: white;
-    width: 200px;
-    margin: auto;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    padding: 10px;
+    padding: 0px;
+    height: 8rem;
+    width: auto;
     border-radius: 10px;
-    animation-name: changeColor;
+    animation-name: blur;
     animation-duration: 2s;
     animation-fill-mode: forwards;
-    font-weight: bold;
+    overflow: hidden;
+
+
+}
+
+img {
+    /* object-fit: fill;
+    min-width: 100%;
+    height: auto; */
+    min-width: 100%;
+    max-height: 100%;
+    width: auto;
+    object-fit: cover;
+    /* height: auto; */
+    /* max-height: 10px; */
+    /* width: auto; */
+    /* display: none; */
+}
+
+a {
+    color: black;
+    text-decoration: none;
+
+}
+
+span {
+    background: none;
+    position: absolute;
+    margin: auto;
+    left: 0px;
+    text-align: center;
+    bottom: 0px;
+    font-size: 0.3rem;
+    width: 100%;
+    padding-left: 20px;
+    padding-right: 20px;
+    background: rgba(255, 255, 255, 0.114);
+    word-wrap: wrap;
+    word-break: break-all;
+    /* display: none; */
+
+}
+
+.wideCard {
+    grid-column: span 2;
+    animation-name: flip-horizontal;
+}
+
+.highCard {
+    grid-row: span 2;
+    height: 16rem;
+    animation-name: flip-vertical;
 }
