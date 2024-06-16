@@ -3,6 +3,7 @@
 
   <head>
     <link href="CSS/style.css" rel="stylesheet">
+    <link href="CSS/slider.css" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <title>Keyframes to OnScroll</title>
     <meta name="description" content="Sample website of keyframesToOnScroll animations" />
@@ -21,20 +22,28 @@
   <body>
 
 
-    <h1> CSS animations -> keyframes to onscroll</h1>
+    <div class="switchContainer">
 
-    <!-- <div class="changeColor">
-      I'm (not) blue dabadee 1
+      <label class="switch" title="checkboxScript">
+        <input type="checkbox" onclick="switchScript()">
+        <span class="slider round"></span>
+      </label>
+      <div class="switchLabel" id="switchLabel">
+        On Scroll Animations
+      </div>
     </div>
-    <div class="changeColor">
-      I'm (not) blue dabadee 2
-    </div>
-    <div class="changeColor">
-      I'm (not) blue dabadee 3
-    </div> -->
+
+
     <div class="extraSpace"></div>
+
+    <div class="shape">
+
+    </div>
+    <div class="shape right"></div>
+
+
     <h2>
-      Keyframes -> onscroll
+      Keyframes → onScroll
     </h2>
 
     <a href="https://www.pexels.com">Photos provided by Pexels</a>
@@ -64,7 +73,8 @@
       <div class="card highCard">
         <img loading="lazy" src="images\pexels-thatguycraig000-1525612.jpg" alt="">
         <span class='credits'>
-          Photo by Craig Adderley: https://www.pexels.com/photo/vehicles-on-road-between-high-rise-buildings-1525612/
+          Photo by Craig Adderley:
+          https://www.pexels.com/photo/vehicles-on-road-between-high-rise-buildings-1525612/
         </span>
       </div>
       <div class="card">
@@ -79,7 +89,7 @@
           Photo by Rudolf Jakkel: https://www.pexels.com/photo/green-grass-on-forest-418831/
         </span>
       </div>
-      <div class="card highCard">
+      <div class="card highCard highCard1">
         <img loading="lazy" src="images\pexels-fmaderebner-869258.jpg" alt="">
         <span class='credits'>
           Photo by Flo Maderebner: https://www.pexels.com/photo/two-man-hiking-on-snow-mountain-869258/
@@ -92,21 +102,75 @@
         </span>
       </div>
       <div class="card">
-        <img loading="lazy" src="" alt="">
+        <img loading="lazy" src="images\pexels-jvdm-1524628.jpg" alt="">
         <span class='credits'>
-
+          Photo by Jean van der Meulen: https://www.pexels.com/photo/grayscale-photo-of-zebra-1524628/
         </span>
       </div>
-      <div class="card"></div>
-      <div class="card"></div>
-      <div class="card highCard"></div>
-      <div class="card"></div>
-      <div class="card"></div>
-      <div class="card"></div>
-      <div class="card"></div>
-      <div class="card"></div>
-      <div class="card"></div>
-      <div class="card"></div>
+      <div class="card">
+
+        <img loading="lazy" src="images\pexels-nubikini-386025.jpg" alt="">
+        <span class='credits'>Photo by Nubia Navarro (nubikini):
+          https://www.pexels.com/photo/yellow-van-die-cast-386025/
+        </span>
+      </div>
+      <div class="card">
+        <img loading="lazy" src="images\pexels-jeremy-bishop-1260133-2397653.jpg" alt="">
+        <span class='credits'>
+          Photo by Jeremy Bishop: https://www.pexels.com/photo/underwater-photography-of-turtle-2397653/
+        </span>
+      </div>
+
+      <div class="card">
+        <img loading="lazy" src="images/pexels-alex-andrews-271121-861443.jpg" alt="">
+        <span class='credits'>
+          Photo by Alex Andrews: https://www.pexels.com/photo/full-moon-on-a-blue-sky-861443/
+        </span>
+      </div>
+      <div class="card highCard">
+        <img loading="lazy" src="images\pexels-thatguycraig000-1525612.jpg" alt="">
+        <span class='credits'>
+          Photo by Craig Adderley:
+          https://www.pexels.com/photo/vehicles-on-road-between-high-rise-buildings-1525612/
+        </span>
+      </div>
+      <div class="card">
+        <img loading="lazy" src="images\pexels-jvdm-1524628.jpg" alt="">
+        <span class='credits'>
+          Photo by Jean van der Meulen: https://www.pexels.com/photo/grayscale-photo-of-zebra-1524628/
+        </span>
+      </div>
+      <div class="card">
+        <img loading="lazy" src="images\pexels-jakkel-418831.jpg" alt="">
+        <span class='credits'>
+          Photo by Rudolf Jakkel: https://www.pexels.com/photo/green-grass-on-forest-418831/
+        </span>
+      </div>
+      <div class="card highCard highCard1">
+        <img loading="lazy" src="images\pexels-fmaderebner-869258.jpg" alt="">
+        <span class='credits'>
+          Photo by Flo Maderebner: https://www.pexels.com/photo/two-man-hiking-on-snow-mountain-869258/
+        </span>
+      </div>
+      <div class="card wideCard">
+        <img loading="lazy" src="images\pexels-sagui-andrea-200115-618833.jpg" alt="">
+        <span class='credits'>
+          Photo by Sagui Andrea: https://www.pexels.com/photo/snow-covered-mountain-during-sunrise-618833/
+        </span>
+      </div>
+      <div class="card">
+        <img loading="lazy" src="images\pexels-jvdm-1524628.jpg" alt="">
+        <span class='credits'>
+          Photo by Jean van der Meulen: https://www.pexels.com/photo/grayscale-photo-of-zebra-1524628/
+        </span>
+      </div>
+      <div class="card">
+        <img loading="lazy" src="images\pexels-jeremy-bishop-1260133-2397653.jpg" alt="">
+        <span class='credits'>
+          Photo by Jeremy Bishop: https://www.pexels.com/photo/underwater-photography-of-turtle-2397653/
+        </span>
+      </div>
+
 
     </div>
 
@@ -119,7 +183,22 @@
 
 
 
+
     <script src="script/script.js"></script>
+    <script>
+
+      generateAnimations = true
+      function switchScript() {
+        generateAnimations = !generateAnimations
+        if (generateAnimations) {
+          $('#switchLabel').html('On Scroll Animations')
+        }
+        else {
+          $('#switchLabel').html('keyFrame Animations')
+        }
+        iterateRules()
+      }
+    </script>
 
   </body>
 
