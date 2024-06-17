@@ -100,15 +100,6 @@ function iterateRules(generateAnimations) {
                                     element1.style.setProperty('animation-direction', 'normal', 'important');
                                     element1.style.setProperty('transition-duration', '0.5s', 'important');
 
-
-                                    // document.styleSheets[0].insertRule(
-                                    //     `${elName} { animation-duration:0s!important;\
-                                    //     animation-iteration-count: 1!important;\
-                                    //     animation-fill-mode:none!important;\
-                                    //     animation-direction:normal!important;\
-                                    //     transition-duration:0.5s!important;\
-                                    // }`, document.styleSheets[0].cssRules.length
-                                    // )
                                     window.addEventListener('scroll', myListener)
                                     window.addEventListener('load', myListener)
                                     // Run all animations once on load
@@ -125,16 +116,9 @@ function iterateRules(generateAnimations) {
                                     element1.style.setProperty('animation-fill-mode', 'both', 'important');
                                     element1.style.setProperty('animation-direction', 'alternate', 'important');
                                     // element1.style.setProperty('transition-duration', '0s', 'important');
-                                    // document.styleSheets[0].insertRule(
-                                    //     `${elName} { animation-duration:3s!important;\
-                                    //     animation-iteration-count: infinite!important;\
-                                    //     animation-fill-mode:forwards!important;\
-                                    //     animation-direction:alternate!important;\
-                                    // }`, document.styleSheets[0].cssRules.length
-                                    // )
-                                    // console.log(document.styleSheets[0])
-                                    // window.removeEventListener('scroll', myListener)
-                                    // window.removeEventListener('load', myListener)
+
+                                    window.removeEventListener('scroll', myListener)
+                                    window.removeEventListener('load', myListener)
                                 }
                             })
                         }
