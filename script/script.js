@@ -14,7 +14,15 @@ let generateAnimations = true;
 
 
 window.addEventListener('load', function () {
-    iterateRules(generateAnimations)
+    let isReduced = window.matchMedia(`(prefers-reduced-motion: reduce)`) === true || window.matchMedia(`(prefers-reduced-motion: reduce)`).matches === true;
+
+    if (!!isReduced) {
+        alert('reduced motion detected, this website will not show animations')
+    } else {
+        iterateRules(generateAnimations)
+    }
+
+
 })
 
 // Iterate through all stylesheets (or just the first one, if you prefer)
@@ -485,7 +493,18 @@ function switchScript() {
     else {
         $('#switchLabel').html('Script is Off (showing keyframe animations)')
     }
-    iterateRules(generateAnimations)
+
+    let isReduced = window.matchMedia(`(prefers-reduced-motion: reduce)`) === true || window.matchMedia(`(prefers-reduced-motion: reduce)`).matches === true;
+    if (!!isReduced && !generateAnimations) {
+        alert('reduced motion detected, keyframe animations will not show')
+    }
+    if (!!isReduced && generateAnimations) {
+        alert('reduced motion detected, on-scroll animations will not show')
+    }
+    else {
+        iterateRules(generateAnimations)
+    }
+
 }
 
 

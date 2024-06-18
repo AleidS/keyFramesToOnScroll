@@ -391,3 +391,10 @@ img {
     }
 
 }
+
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation: none !important;
+        transition-duration: 0s !important;
+    }
+}
